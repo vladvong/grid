@@ -1,0 +1,83 @@
+:root{
+    --color-white:#FFFFFF;
+    --color-black:#2D3436;
+    --color-gray-dark-64:#5C5C5C;
+    --color-gray-48: #858585;
+    --color-gray-light-32:#ADADAD;
+    --color-gray-soft-24:#C2C2C2;
+    
+    /* Blue */
+    --Blue-Dark:#0984E3;
+    --Blue-Light:#74B9FF;
+
+    /* Green */
+    --Green-Dark:#00B894;
+    --Green-Light:#55EFC4;
+
+    /* Yellow */
+    --Yellow-Dark:#FDCB6E;
+    --Yellow-Light:#FFEAA7;
+
+    /* Red */
+    --Red-Dark:#D63031;
+    --Red-Light:#FF7675;
+
+    /* Purple */
+    --Purple-Dark:#6C5CE7;
+    --Purple-Light:#A29BFE;
+
+    /* Pink */
+    --Pink-Dark:#E84393;
+    --Pink-Light:#FD79A8;
+
+    /* fonts */
+    --font-family-m: InterM , sans-serif;
+    --font-family-l: Interl , sans-serif;
+    --font-family-r: InterR , sans-serif;
+    --font-family-b: InterB , sans-serif;
+
+
+    /* Animation Speed */
+    --Animation-Speed: .3s;
+    --Animation-Func: ease;
+    --Animation:var(--Animation-Speed) var(--Animation-Func);
+}
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    margin: 0;
+    height: 4000px;
+}
+
+.mask{
+    width: 100%;
+    height: 100%;
+    background: rgb(255, 255, 255);
+    position: fixed;
+    top: 0;
+    z-index: 1100;
+    transition: 0.5s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.loader{
+    width: 75px;
+    height: 75px;
+    border-radius: 50%;
+    border: 10px solid var(--Purple-Dark);
+    border-left-color: var(--color-black) ;
+    animation: loader 1.3s linear infinite;
+}
+@keyframes loader{
+    100% {
+        transform: rotate(360deg);
+    }
+}
+.hide{
+    opacity: 0;
+}
